@@ -1,15 +1,20 @@
 import styles from './PictureCard.module.css';
 import Image from 'next/image';
 export interface IPictureCard {
-    tag: string;
-    title: string;
-    body: string;
-    author: string;
-    time: string;
+  tag: string;
+  title: string;
+  body: string;
+  author: string;
+  time: string;
 }
 
-
-const PictureCard: React.FC<IPictureCard> = ({ tag, title, body, author, time }) => {
+const PictureCard: React.FC<IPictureCard> = ({
+  tag,
+  title,
+  body,
+  author,
+  time,
+}) => {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
@@ -18,7 +23,7 @@ const PictureCard: React.FC<IPictureCard> = ({ tag, title, body, author, time })
             src="/time-cart.jpeg"
             alt="card__image"
             className={styles.card__image}
-            width="600" 
+            width="600"
             height="400"
           />
         </div>
