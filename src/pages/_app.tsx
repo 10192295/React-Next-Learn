@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 import '@/styles/globals.css';
 import { NextPageWithLayout } from './page';
-import 'antd/dist/reset.css'
+import 'antd/dist/reset.css';
 
 interface AppPropsWithLayout extends AppProps {
   Component: NextPageWithLayout;

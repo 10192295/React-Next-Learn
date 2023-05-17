@@ -11,3 +11,9 @@ pnpm dev
 ```
 yarn storybook
 ```
+
+yarn prettier
+
+```
+
+```

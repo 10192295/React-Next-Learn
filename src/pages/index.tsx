@@ -1,6 +1,7 @@
-
-import { Button, Card } from "antd";
-import { useRouter } from 'next/router'
+import PrimaryLayout from '@/components/layout/primary/PrimaryLayout';
+// import { useRouter } from 'next/router'
+import { NextPageWithLayout } from './page';
+import Carouse from '@/components/Carouse';
 
 export async function getStaticProps() {
   const db = process.env.LOCALHOST;
@@ -10,16 +11,20 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home() {
-  const router = useRouter()
-  function handleClick() {
-    router.push('/menu')
-  }
+const Home: NextPageWithLayout = () => {
+  // const router = useRouter()
+  // function handleClick() {
+  //   router.push('/menu')
+  // }
   return (
     <div className="main-page">
-      <Card>
-      <Button onClick={handleClick}>Login in</Button>
-      </Card>
+      <Carouse />
     </div>
-  )
-}
+  );
+};
+
+export default Home;
+
+Home.getLayout = (page) => {
+  return <PrimaryLayout>{page}</PrimaryLayout>;
+};
