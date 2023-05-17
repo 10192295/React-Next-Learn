@@ -1,6 +1,6 @@
 import styles from './BaseTemplate.module.css';
 export interface IBaseTemplate {
-    sampleTextProp: string;
+  sampleTextProp: string;
 }
 
 const BaseTemplate: React.FC<IBaseTemplate> = ({ sampleTextProp }) => {
