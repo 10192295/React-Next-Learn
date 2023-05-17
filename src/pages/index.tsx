@@ -1,9 +1,6 @@
-import PictureCard from '@/components/cards/picture/PictureCard';
-import { mockPictureCardProps } from '@/components/cards/picture/PictureCard.mocks';
-import { mockSidebarLayoutProps } from '@/components/layout/sidebar/SidebarLayout.mocks';
-import { NextPageWithLayout } from './page';
-import PrimaryLayout from '@/components/layout/primary/PrimaryLayout';
-import SidebarLayout from '@/components/layout/sidebar/SidebarLayout';
+
+import { Button, Card } from "antd";
+import { useRouter } from 'next/router'
 
 export async function getStaticProps() {
   const db = process.env.LOCALHOST;
@@ -13,20 +10,16 @@ export async function getStaticProps() {
   };
 }
 
-const Home: NextPageWithLayout = () => {
+export default function Home() {
+  const router = useRouter()
+  function handleClick() {
+    router.push('/menu')
+  }
   return (
-    <section>
-      <PictureCard {...mockPictureCardProps.base} />
-    </section>
-  );
-};
-export default Home;
-
-Home.getLayout = (page) => {
-  return (
-    <PrimaryLayout>
-      <SidebarLayout {...mockSidebarLayoutProps.base} />
-      {page}
-    </PrimaryLayout>
-  );
-};
+    <div className="main-page">
+      <Card>
+      <Button onClick={handleClick}>Login in</Button>
+      </Card>
+    </div>
+  )
+}

@@ -82,6 +82,7 @@
 html,
 body {
   max-width: 100vw;
+  height: 100%;
   overflow-x: hidden;
 }
 
@@ -104,4 +105,21 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.main-page {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.normal-input {
+  width: 240px;
+  height: 40px;
+}
+
+.form-row {
+  padding: 10px;
 }
