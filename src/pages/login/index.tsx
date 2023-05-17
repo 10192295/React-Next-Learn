@@ -1,13 +1,16 @@
+import PrimaryLayout from '@/components/layout/primary/PrimaryLayout';
 import { Button, Card, Input, Row } from 'antd';
 import { useRouter } from 'next/router';
+import { NextPageWithLayout } from '../page';
+import styles from './Login.module.css'
 
-export default function Home() {
+const Login: NextPageWithLayout = () => {
   const router = useRouter();
   function handleClick() {
-    router.push('/');
+    router.push('/menu');
   }
   return (
-    <div className="main-page">
+    <div className={styles.page}>
       <Card style={{ width: 600, height: 600 }}>
         <Row justify={'center'} className="form-row">
           <Input name="accountInput" className="normal-input" />
@@ -20,3 +23,9 @@ export default function Home() {
     </div>
   );
 }
+
+export default Login
+
+Login.getLayout = (page) => {
+  return <PrimaryLayout>{page}</PrimaryLayout>;
+};
