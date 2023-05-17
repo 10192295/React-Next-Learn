@@ -11,9 +11,8 @@ pnpm dev
 ```
 yarn storybook
 ```
-
-yarn prettier
-
+代码格式化
 ```
+yarn prettier
 
 ```
