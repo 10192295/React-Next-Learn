@@ -2,13 +2,13 @@ import PrimaryLayout from '@/components/layout/primary/PrimaryLayout';
 import SidebarLayout from '@/components/layout/sidebar/SidebarLayout';
 import { mockSidebarLayoutProps } from '@/components/layout/sidebar/SidebarLayout.mocks';
 import { NextPageWithLayout } from '../page';
-import Carouse from '@/components/Carouse';
+import Carouse from '@/components/layout/carousel/Carouse';
 
 const Menu: NextPageWithLayout = () => {
   return (
     <section>
       <h2>Layout Example (Menu)</h2>
-      <Carouse />
+      <Carouse isPageLink={false}/>
     </section>
   );
 };

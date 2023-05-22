@@ -8,6 +8,7 @@ yarn dev
 
 pnpm dev
 
+运行storybook
 ```
 yarn storybook
 ```
