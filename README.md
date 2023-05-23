@@ -8,12 +8,12 @@ yarn dev
 
 pnpm dev
 
+运行storybook
 ```
 yarn storybook
 ```
-
-yarn prettier
-
+代码格式化
 ```
+yarn prettier
 
 ```
